@@ -14,7 +14,7 @@ export default function Home() {
       {/* <WhyChooseUs/> */}
       <TestimonialCards/>
       <UpComingWebnar/>
-      <Instracter/>
+      {/* <Instracter/> */}
       <Footer/>
     </main>
   );
