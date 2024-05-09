@@ -77,32 +77,32 @@ const FeaturedSection = () => {
         </div>
       </div>
       <div className="mt-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {listings.map((item: Listings) => (
             <div key={item.ListingId} className="flex justify-center">
               <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
-                  {/* <Image 
+                  <Image 
                 src={''}
                 // src={item.image}
                 alt="image"
                 height={300}
                 width={200}
                 className="object-contain justify-center" 
-                /> */}
+                />
 
-                  {/* {listings.map((listing: Listings) => (
+                  {listings.map((listing: Listings) => (
                     <img
                       key={listing.Media[0].Order}
                       src={listing.Media[0].MediaURL}
                       alt="this is image"
                     />
-                  ))} */}
+                  ))}
 
                   {listings.map((listing: Listings) => (
                     <div key={listing.Media[0].Order}>
                       {listing.Media && listing.Media.length > 0 && (
-                        <img
+                        <Image
                           src={listing.Media[1].MediaURL}
                           alt="this is image"
                           height={300}
@@ -124,8 +124,8 @@ const FeaturedSection = () => {
               </BackgroundGradient>
             </div>
           ))}
-        </div>
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+        </div> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {featuredPropertes.map((item:Course)=> (
             <div key={item.id} className="flex justify-center">
               <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
@@ -148,7 +148,7 @@ const FeaturedSection = () => {
               </BackgroundGradient>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
       <div className="mt-20 text-center">
         <Link
