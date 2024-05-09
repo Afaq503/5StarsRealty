@@ -77,13 +77,14 @@ const FeaturedSection = () => {
     (course: Course) => course.isFeatured
   );
   return (
-    <div className="py-12 bg-gray-900">
+    <div className="py-12 bg-white">
+    {/* <div className="py-12 bg-gray-900"> */}
       <div>
         <div className="text-center">
           <h2 className="text-base text-teal-600 font-smeibold tracking-wide uppercase">
             FEARTURED PROPERTIES
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-black sm:text-4xl">
             Check with the Best
           </p>
         </div>
