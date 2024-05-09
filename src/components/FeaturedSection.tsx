@@ -14,7 +14,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-interface Course {
+interface Properties {
   id: number;
   title: string;
   slug: string;
@@ -28,57 +28,17 @@ interface Course {
   Balcony: number;
   type: string;
 }
-interface Listings {
-  ListingId: string;
-  BuilderModel: string;
-  YearBuiltDetails: string;
-  HighSchool: string;
-  Media: Media[];
-}
-interface Media {
-  Order: number;
-  MediaURL: string;
-  ResourceRecordKey: string;
-  ResourceName: string;
-  ClassName: string;
-  MediaCategory: string;
-  MimeType: string;
-  MediaObjectID: string;
-  ShortDescription: string;
-}
+
 
 const FeaturedSection = () => {
-  const [listings, setListings] = useState([]);
 
-  useEffect(() => {
-    const fetchListings = async () => {
-      try {
-        const response = await fetch(
-          "https://api.bridgedataoutput.com/api/v2/test/listings?access_token=5b10bb2de02292b88de3bdb70a249701"
-        );
-
-        if (response.ok) {
-          const data = await response.json();
-          console.log("data is here", data);
-
-          setListings(data.bundle);
-        } else {
-          console.error("Failed to fetch listings");
-        }
-      } catch (error) {
-        console.error("Error fetching listings:", error);
-      }
-    };
-
-    fetchListings();
-  }, []);
+ 
 
   const featuredPropertes = ApiData.courses.filter(
-    (course: Course) => course.isFeatured
+    (course: Properties) => course.isFeatured
   );
   return (
     <div className="py-12 bg-white">
-    {/* <div className="py-12 bg-gray-900"> */}
       <div>
         <div className="text-center">
           <h2 className="text-base text-teal-600 font-smeibold tracking-wide uppercase">
@@ -90,45 +50,13 @@ const FeaturedSection = () => {
         </div>
       </div>
       <div className="mt-10">
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {listings.map((item: Listings) => (
-            <div key={item.ListingId} className="flex justify-center">
-              <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
-                <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
-                 
-
-                  {listings.map((listing: Listings) => (
-                    <Image
-                      key={listing.Media[0].Order}
-                      src={listing.Media[0].MediaURL}
-                      alt="this is image"
-                      width={200}
-                      height={200}
-                      className="object-contain justify-center"
-                    />
-                  ))}
-
-             
-
-                  <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                    {item.BuilderModel}
-                  </p>
-                  <p className="text-sm  text-neutral-600 dark:text-netural-400 flex-grow">
-                    {item.YearBuiltDetails}
-                  </p>
-                  <Link href={`/courese/${item.HighSchool}`}>Learn More</Link>
-                </div>
-              </BackgroundGradient>
-            </div>
-          ))}
-        </div> */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {featuredPropertes.map((item: Course) => (
+          {featuredPropertes.map((item: Properties) => (
             <div key={item.id} className="flex justify-center">
               <BackgroundGradient className="flex flex-col rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm">
                 <div className="p-4 sm:p-6 flex flex-col items-center text-center flex-grow">
                   <Image
-                    // src={''}
                     src={item.image}
                     alt="image"
                     height={300}
@@ -138,7 +66,6 @@ const FeaturedSection = () => {
                   <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
                     {item.title}
                   </p>
-                  {/* <p className="text-sm  text-neutral-600 dark:text-netural-400 flex-grow">{item.descripation}</p> */}
                   <div className=" flex-row flex justify-evenly gap-10">
                     <div className="flex items-center text-neutral-100">
                       <FontAwesomeIcon icon={faBed} className="mr-2" />
@@ -147,9 +74,7 @@ const FeaturedSection = () => {
                         <p>Beds</p>
                       </div>
                     </div>
-                    {/* <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                      Beds:{item.Beds}
-                    </p> */}
+                   
                     <div className="flex items-center text-neutral-100">
                       <FontAwesomeIcon icon={faBath} className="mr-2" />
                       <div className="flex flex-row gap-3">
@@ -157,9 +82,7 @@ const FeaturedSection = () => {
                         <p>Baths</p>
                       </div>
                     </div>
-                    {/* <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                      Baths:{item.Baths}
-                    </p> */}
+                    
                     <div className="flex items-center text-neutral-100">
                       <FontAwesomeIcon icon={faMountain} className="mr-2" />
                       <div className="flex flex-row gap-3">
@@ -167,9 +90,7 @@ const FeaturedSection = () => {
                         <p>Balcony</p>
                       </div>
                     </div>
-                    {/* <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                      Balcony:{item.Balcony}
-                    </p> */}
+                    
                   </div>
                   <div className="mt-10 flex flex-row justify-betweeen gap-20">
                     <div className="flex items-center text-neutral-100">
@@ -181,12 +102,7 @@ const FeaturedSection = () => {
                       <FontAwesomeIcon icon={faInfoCircle} className="mr-2" />
                       <p>Type: {item.type}</p>
                     </div>
-                    {/* <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                      Price:{item.price}
-                    </p>
-                  <p className="text-lg sm:text-xl text-neutral-100 mt-4 mb-2 dark:text-netural-200">
-                      Type:{item.type}
-                    </p> */}
+                    
                   </div>
                   <div className="mt-5 border p-2 rounded-lg">
                     <Link href={`/courese/${item.slug}`}>Learn More</Link>
@@ -199,7 +115,7 @@ const FeaturedSection = () => {
       </div>
       <div className="mt-20 text-center">
         <Link
-          href={"/"}
+          href={"/property"}
           className="px-4 py-2 rounded border border-neutral-600 text-neutral-700 bg-white hover:bg-gray-100 transition duration-200"
         >
           View All properties
