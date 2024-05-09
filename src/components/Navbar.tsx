@@ -19,7 +19,14 @@ const Navbar = ({ className }: { className?: string }) => {
             item="Home"
           ></MenuItem>
         </Link>
-        <MenuItem
+        <Link href={"/property"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Properties"
+          ></MenuItem>
+        </Link>
+        {/* <MenuItem
           setActive={setActive}
           active={active}
           item="Our Properties"
@@ -41,7 +48,7 @@ const Navbar = ({ className }: { className?: string }) => {
                 Bulidings
             </HoveredLink>
             </div>
-        </MenuItem>
+        </MenuItem> */}
         <Link href={'/contact'}>
             <MenuItem
             setActive={setActive}
