@@ -4,7 +4,10 @@ import Link from "next/link";
 const Page = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 rounded-xl overflow-hidden shadow-xl">
+      
       <div className="relative mt-20 w-full max-w-lg bg-gradient-to-r from-blue-500 to-teal-500">
+      <Meteors number={500} />
+
         <div className="p-8 flex flex-col items-center justify-center">
           <h1 className="text-3xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-white mb-4">
@@ -34,7 +37,7 @@ const Page = () => {
               Send
             </Link>
           </div>
-      <Meteors number={500} />
+          
         </div>
       </div>
     </div>
