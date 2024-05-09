@@ -1,0 +1,64 @@
+{
+    "courses": [
+        {
+            "id":1,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        },
+        {
+            "id":2,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        },
+        {
+            "id":3,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        },
+        {
+            "id":4,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        },
+        {
+            "id":5,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        },
+        {
+            "id":6,
+            "title":"This is House",
+            "slug":"this-house",
+            "descripation":"The basic of Playing with our compreshancive The basic of Playing with our compreshancive The basic of Playing with our compreshancive ",
+            "price":99.99,
+            "agent": "Johon Deo",
+            "isFeatured": true,
+            "image":"/no-wifi.png"
+        }
+    ]
+}
