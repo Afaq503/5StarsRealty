@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 
-const page = () => {
+const page: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const handleImageClick = (imageSrc: string) => {
