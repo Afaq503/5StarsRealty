@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import React, { useState } from "react";
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const handleImageClick = (imageSrc: string) => {
@@ -280,4 +280,4 @@ const page: React.FC = () => {
   );
 };
 
-export default page;
+export default Page;
