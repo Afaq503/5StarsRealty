@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import ApiData from "@/data/muisc_coures.json";
 import HeroSection from "@/components/HeroSection";

@@ -105,7 +105,8 @@ const FeaturedSection = () => {
                     
                   </div>
                   <div className="mt-5 border p-2 rounded-lg">
-                    <Link href={`/courese/${item.slug}`}>Learn More</Link>
+                    <Link href={`/details`}>Learn More</Link>
+                    {/* <Link href={`/details/${item.slug}`}>Learn More</Link> */}
                   </div>
                 </div>
               </BackgroundGradient>
